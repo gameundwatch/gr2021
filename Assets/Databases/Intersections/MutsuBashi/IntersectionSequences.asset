@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e816341f5118be44b9d60f4e165a451, type: 3}
+  m_Name: IntersectionSequences
+  m_EditorClassIdentifier: 
+  intersectionID: 0
+  intersectionName: MutsuBashi
+  stepsValue: 15
+  lightsValue: 2
+  stepTime: 20000000060000000400000003000000030000000800000003000000030000001a000000060000000400000003000000080000000300000003000000
+  havingLights:
+  - {fileID: 11400000, guid: 8cc742609fd7f4147941af83077c214c, type: 2}
+  - {fileID: 11400000, guid: 05fb427ca23e00649bf1e2a0512e3dde, type: 2}

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e816341f5118be44b9d60f4e165a451, type: 3}
+  m_Name: IntersectionSequences
+  m_EditorClassIdentifier: 
+  intersectionID: 289
+  intersectionName: ByackoMachiWest
+  stepsValue: 12
+  lightsValue: 3
+  stepTime: 240000000400000002000000030000000500000003000000030000001400000006000000020000000300000003000000
+  havingLights:
+  - {fileID: 11400000, guid: 9df62703862972240bf4289e73eb9018, type: 2}
+  - {fileID: 11400000, guid: d06d221bf97167e4389596b9ce80f170, type: 2}
+  - {fileID: 11400000, guid: 5f5607686c145e94eb48f8ea273a6bb1, type: 2}

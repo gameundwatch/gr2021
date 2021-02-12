@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e816341f5118be44b9d60f4e165a451, type: 3}
+  m_Name: IntersectionSequences
+  m_EditorClassIdentifier: 
+  intersectionID: 287
+  intersectionName: Ougimachi
+  stepsValue: 10
+  lightsValue: 2
+  stepTime: 24000000060000000200000004000000020000000e00000008000000020000000400000002000000
+  havingLights:
+  - {fileID: 11400000, guid: 1c4c66d09a82e994c97a0081284d8993, type: 2}
+  - {fileID: 11400000, guid: 865931b0b7f799040a48335a91ae62fa, type: 2}

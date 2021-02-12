@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e816341f5118be44b9d60f4e165a451, type: 3}
+  m_Name: IntersectionSequences
+  m_EditorClassIdentifier: 
+  intersectionID: 15232
+  intersectionName: Muramae
+  stepsValue: 12
+  lightsValue: 3
+  stepTime: 1c0000000400000002000000030000000400000003000000030000001e00000005000000050000000300000003000000
+  havingLights:
+  - {fileID: 11400000, guid: 7acaa7e05c9260b4a94824548320af4a, type: 2}
+  - {fileID: 11400000, guid: 41d32ab582b3ae04d8c297c9b836098f, type: 2}
+  - {fileID: 11400000, guid: b56a5d6915ea07848b7278aa37b5f0d4, type: 2}

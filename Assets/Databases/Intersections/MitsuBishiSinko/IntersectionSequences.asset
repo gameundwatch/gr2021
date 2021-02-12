@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e816341f5118be44b9d60f4e165a451, type: 3}
+  m_Name: IntersectionSequences
+  m_EditorClassIdentifier: 
+  intersectionID: 0
+  intersectionName: MitsuBishiShinko
+  stepsValue: 12
+  lightsValue: 3
+  stepTime: 190000000500000002000000040000000500000004000000020000001300000006000000020000000400000002000000
+  havingLights:
+  - {fileID: 11400000, guid: 10550b720fa82c24a839800ad69fcf91, type: 2}
+  - {fileID: 11400000, guid: 91d37ccb0bc54d24297e4d8b82f41636, type: 2}
+  - {fileID: 11400000, guid: 4a1d8a5d66b9b864c80e8b49e72f72b2, type: 2}
