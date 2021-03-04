@@ -342,7 +342,7 @@ public class SoundMNG : MonoBehaviour
         Debug.Log(mPath);
         if (mPath.Substring(mPath.Length - 3) == "ogg" || mPath.Substring(mPath.Length - 3) == "OGG") {
             // OGG VORVIS
-            using (var uwr = UnityWebRequestMultimedia.GetAudioClip("file://" + mPath , AudioType.OGGVORBIS )) {
+            using (var uwr = UnityWebRequestMultimedia.GetAudioClip("file:///" + mPath , AudioType.OGGVORBIS )) {
                 yield return uwr.SendWebRequest();
                 if (uwr.isNetworkError || uwr.isHttpError) {
                     Debug.LogError(uwr.error);
@@ -356,7 +356,7 @@ public class SoundMNG : MonoBehaviour
         } else if (mPath.Substring(mPath.Length - 3) == "wav" || mPath.Substring(mPath.Length - 3) == "WAV") {
 
             // WAV 
-            using (var uwr = UnityWebRequestMultimedia.GetAudioClip("file://" + mPath , AudioType.WAV )) {
+            using (var uwr = UnityWebRequestMultimedia.GetAudioClip("file:///" + mPath , AudioType.WAV )) {
                 yield return uwr.SendWebRequest();
                 if (uwr.isNetworkError || uwr.isHttpError) {
                     Debug.LogError(uwr.error);
