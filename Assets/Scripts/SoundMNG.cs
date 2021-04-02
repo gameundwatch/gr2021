@@ -16,8 +16,6 @@ public class SoundMNG : MonoBehaviour
     [SerializeField]
     private AudioClip[] Sounds;
 
-    public string SoundPath;
-
     // フェードイン時間の設定（秒）
     [SerializeField]
     private float FadeInTime;
@@ -49,8 +47,8 @@ public class SoundMNG : MonoBehaviour
     private BGM_STATE _bgm_state;
     private BGM_STATE _state_work;
 
-		[SerializeField]
-		private BycicleController _bycicle_rider;
+	[SerializeField]
+	private BycicleController _bycicle_rider;
 
     //-------------------------------------------------//
 
@@ -157,8 +155,8 @@ public class SoundMNG : MonoBehaviour
             // BGM_STATE == ENDの場合、WAITに送る
 
             case BGM_STATE.END:
-							_bgm_state = BGM_STATE.WAIT;
-						break;                
+				_bgm_state = BGM_STATE.WAIT;
+			    break;                
         }
 
 				// Speedに応じて音楽を変化させる
@@ -176,6 +174,7 @@ public class SoundMNG : MonoBehaviour
         // 最大曲数判定
         if (0 <= SoundNum && SoundNum < Sounds.Length)
         {
+            Debug.Log(Sounds[SoundNum]);
             MainAudioSource.clip = Sounds[SoundNum];
         }
         else
@@ -334,40 +333,43 @@ public class SoundMNG : MonoBehaviour
     IEnumerator StreamPlayAudioFile()
     {
         string mPath = GameTitle.GetMusicPath();
+        AudioClip tempAudioClip;
+
         if ( string.IsNullOrEmpty(mPath) ){
             Sounds[0] = Silent;
             yield break;
         }
 
-        Debug.Log(mPath);
         if (mPath.Substring(mPath.Length - 3) == "ogg" || mPath.Substring(mPath.Length - 3) == "OGG") {
             // OGG VORVIS
-            using (var uwr = UnityWebRequestMultimedia.GetAudioClip("file:///" + mPath , AudioType.OGGVORBIS )) {
+            using (var uwr = UnityWebRequestMultimedia.GetAudioClip("file://" + mPath , AudioType.OGGVORBIS )) {
+                ((DownloadHandlerAudioClip)uwr.downloadHandler).streamAudio = true;
                 yield return uwr.SendWebRequest();
                 if (uwr.isNetworkError || uwr.isHttpError) {
                     Debug.LogError(uwr.error);
                     yield break;
                 }
-
-            Sounds[0] = DownloadHandlerAudioClip.GetContent(uwr);
-            // オーディオクリップを使う
+                // オーディオクリップを使う
+                tempAudioClip = DownloadHandlerAudioClip.GetContent(uwr);
             }
+            Sounds[0] = tempAudioClip;
 
         } else if (mPath.Substring(mPath.Length - 3) == "wav" || mPath.Substring(mPath.Length - 3) == "WAV") {
 
             // WAV 
-            using (var uwr = UnityWebRequestMultimedia.GetAudioClip("file:///" + mPath , AudioType.WAV )) {
+            using (var uwr = UnityWebRequestMultimedia.GetAudioClip("file://" + mPath , AudioType.WAV )) {
+                ((DownloadHandlerAudioClip)uwr.downloadHandler).streamAudio = true;
                 yield return uwr.SendWebRequest();
                 if (uwr.isNetworkError || uwr.isHttpError) {
                     Debug.LogError(uwr.error);
                     yield break;
                 }
-
-            Sounds[0] = DownloadHandlerAudioClip.GetContent(uwr);
-            // オーディオクリップを使う
+                // オーディオクリップを使う
+                tempAudioClip = DownloadHandlerAudioClip.GetContent(uwr);
             }
-
+            Sounds[0] = tempAudioClip;
         }
+        
     }
 
 }

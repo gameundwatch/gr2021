@@ -46,7 +46,7 @@ public class GameTitle : MonoBehaviour {
             musicPath += p;
         }
 		  if (string.IsNullOrEmpty(musicPath)){
-      return;
+
 			}
 		callToggle = true;
 		}

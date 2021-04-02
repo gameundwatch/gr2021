@@ -83,7 +83,6 @@ public class BycicleController : MonoBehaviour {
 				{
 					nextSection += 1;
 				}
-				Debug.Log(nextSection);
 			}
 		}
 
